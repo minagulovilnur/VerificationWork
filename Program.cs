@@ -30,9 +30,19 @@ void ShowArray(string[]array){
     Console.Write("]");
     Console.WriteLine();
 }
-//void Numbers(string[]array){
-
-}
+void Numbers(string[]array1,string[]array2){
+     int count =0;
+     for (int i = 0; i < array1.Length; i++)
+     {
+        if(array1[i].Length <= 3)
+        {
+        array2[count] = array1[i];
+        count++;
+        }
+     }
+ }
+     
+     
 
 Console.WriteLine("Input a size massive");          //запрвшиваем размер массива у пользователя
 int size = Convert.ToInt32(Console.ReadLine());
