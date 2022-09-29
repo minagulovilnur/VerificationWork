@@ -42,14 +42,16 @@ void Numbers(string[]array1,string[]array2){
      }
  }
      
-     
-
+    
 Console.WriteLine("Input a size massive");          //запрвшиваем размер массива у пользователя
 int size = Convert.ToInt32(Console.ReadLine());
 
-
-/*
-string[] array1 =RandomArray(size); 
+string[] array1 =RandomArray(size);
 string[] array2 = new string[array1.Length];
-Numbers(array2);
+Numbers(array1,array2);
 
+
+Console.WriteLine($"Массив с размером {size} - " );
+ShowArray(array1);
+Console.WriteLine($"Массив с символами длинна которых <=3 - ");
+ShowArray(array2);
