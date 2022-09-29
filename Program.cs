@@ -13,7 +13,7 @@
 
 
 
-string[]RandomArray(int size){
+string[]RandomArray(int size){                  //рандомный массив из строк
     string[]array = new string[size];
         for (int i = 0; i < array.Length; i++)
         {
@@ -21,16 +21,16 @@ string[]RandomArray(int size){
 
         } return array;
 }
-void ShowArray(string[]array){
+void ShowArray(string[]array){                  //метод вывода массива в консоль
    Console.Write("[ ");
     for(int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i] + " ");
     }
     Console.Write("]");
-    Console.WriteLine();
+    
 }
-void Numbers(string[]array1,string[]array2){
+void Numbers(string[]array1,string[]array2){    // метод отбора из массива чисел которые <=3
      int count =0;
      for (int i = 0; i < array1.Length; i++)
      {
@@ -46,9 +46,11 @@ void Numbers(string[]array1,string[]array2){
 Console.WriteLine("Input a size massive");          //запрвшиваем размер массива у пользователя
 int size = Convert.ToInt32(Console.ReadLine());
 
-string[] array1 =RandomArray(size);
-string[] array2 = new string[array1.Length];
-Numbers(array1,array2);
+string[] array1 =RandomArray(size);                 // создаем массив, который сразу же пропускаем через метод рандома
+string[] array2 = new string[array1.Length];        // создаем 2-ой массив, в котором в индексе элементов будет лежать 
+                                                    // длинна строк 1 го массива
+Numbers(array1,array2);                             // применяем метод отбора элементов 1-го массива1
+
 
 
 Console.WriteLine($"Массив с размером {size} - " );
